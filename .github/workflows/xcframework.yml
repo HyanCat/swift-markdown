@@ -29,4 +29,12 @@ jobs:
         #configuration: # optional, default is release
         # The path to a .xcconfig file that can be used to override Xcode build settings. Relative to the package path.
         #xcconfig: # optional
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        # Artifact name
+        name: swift-markdown-xcframework
+        # A file, directory or wildcard pattern that describes what to upload
+        path: /Users/runner/work/swift-markdown/swift-markdown/Markdown.zip
+        # The desired behavior if no files are found using the provided path.
 
