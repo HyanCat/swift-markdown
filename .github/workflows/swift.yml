@@ -1,0 +1,32 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: swift-create-xcframework
+      # You may pin to the exact commit or the version.
+      # uses: unsignedapps/swift-create-xcframework@0be3a68c84987493a7d7298027274a0862bc5ccd
+      uses: unsignedapps/swift-create-xcframework@v2.3.0
+      with:
+        # The name of the target(s) you want to create an XCFramework bundle for. One artifact will be uploaded for each target. Separate target names with commas.
+        target: Markdown
+        # The platform(s) that you want to build for. Default is to build for all platforms supported in your Package.swift, or all Apple platforms if omited. Comma-delimited string supported.
+        #platforms: # optional
+        # Build with a specific configuration ('debug' or 'release')
+        #configuration: # optional, default is release
+        # The path to a .xcconfig file that can be used to override Xcode build settings. Relative to the package path.
+        #xcconfig: # optional
+
