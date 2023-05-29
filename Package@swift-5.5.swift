@@ -22,6 +22,9 @@ let package = Package(
         .library(
             name: "Markdown",
             targets: ["Markdown"]),
+        .library(
+            name: "CAtomic",
+            targets: ["CAtomic"]),
     ],
     targets: [
         .target(
