@@ -22,7 +22,7 @@ jobs:
       uses: unsignedapps/swift-create-xcframework@v2.3.0
       with:
         # The name of the target(s) you want to create an XCFramework bundle for. One artifact will be uploaded for each target. Separate target names with commas.
-        target: Markdown
+        target: Markdown, CAtomic
         # The platform(s) that you want to build for. Default is to build for all platforms supported in your Package.swift, or all Apple platforms if omited. Comma-delimited string supported.
         #platforms: # optional
         # Build with a specific configuration ('debug' or 'release')
