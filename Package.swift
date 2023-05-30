@@ -21,6 +21,7 @@ let package = Package(
     products: [
         .library(
             name: "Markdown",
+            type: .dynamic,
             targets: ["Markdown"]),
     ],
     targets: [
